@@ -1,13 +1,14 @@
-$(document).ready(function(){
-    $("body").ripples({
-resolution: 512,
-dropRadius: 20,
-perturbance: 0.04,
+let signup = document.querySelector(".signup");
+let login = document.querySelector(".login");
+let slider = document.querySelector(".slider");
+let formSection = document.querySelector(".form-section");
+
+signup.addEventListener("click", () => {
+    slider.classList.add("moveslider");
+    formSection.classList.add("form-section-move");
 });
 
-  $(".poster").ripples({
-resolution: 512,
-dropRadius: 20,
-perturbance: 0.04,
-});
+login.addEventListener("click", () => {
+    slider.classList.remove("moveslider");
+    formSection.classList.remove("form-section-move");
 });
